@@ -51,17 +51,17 @@
                 <!-- <ul>
                 <li><button class="primary-btn"><img src="assets/images/icon/wallet.svg" alt="icon"> Connect Wallet</button></li>
               </ul> -->
-                <ul
+                <div
                   class="d-flex align-items-center gap-3 border-1 rounded-5 ps-md:4 ps-2 bg-white-10"
                 >
-                  <li id="wallet-address">0xE476367c4e776367c4e7d117429</li>
-                  <li>
+                  <div id="wallet-address">0xE476367c4e776367c4e7d117429</div>
+                  <div>
                     <button class="primary-btn">
                       <img src="assets/images/icon/close.svg" alt="icon" />
                       Disconnect
                     </button>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -125,14 +125,15 @@
               </div>
 
               <div class="w-50 mt-4">
-                <div
+                <button
+                  type="submit"
                   class="primary-btn w-100 justify-content-center pointer"
                   data-bs-toggle="modal"
                   data-bs-target="#confirm-modal"
                 >
                   Start Vesting
                   <img src="assets/images/icon/arrow-up-right.svg" alt="icon" />
-                </div>
+                </button>
               </div>
             </form>
           </div>
@@ -172,11 +173,12 @@
                     class="inner-box-design border-2 h-100 d-flex justify-content-center align-items-center"
                   >
                     <div class="w-75">
-                      <div
+                      <button
+                        type="submit"
                         class="primary-btn w-100 justify-content-center pointer"
                       >
                         CLAIM
-                      </div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -339,7 +341,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-12 pointer-disable opacity-50">
+          <div class="col-md-12">
             <div class="box-design d-flex flex-column gap-3">
               <div class="row gy-4 justify-content-center">
                 <div class="col-lg-4 col-sm-6">
@@ -359,7 +361,7 @@
                     class="inner-box-design border-2 h-100 d-flex justify-content-center align-items-center"
                   >
                     <div
-                      class="primary-btn w-100 text-white justify-content-center pointer bg-white-10"
+                      class="pointer-disable primary-btn w-100 text-white justify-content-center pointer bg-white-10"
                     >
                       Already Claimed
                     </div>
@@ -412,7 +414,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="border-1 rounded py-4 p-3 text-center">
-              <img src="assets/images/thumbnails/empty.png" alt="empty">
+              <img src="assets/images/thumbnails/empty.png" alt="empty" />
               <p class="mt-3">No history available</p>
             </div>
           </div>
