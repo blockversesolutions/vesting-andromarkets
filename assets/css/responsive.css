@@ -1,0 +1,80 @@
+@media all and (max-width: 1400px) {
+  .circle-effect-2 {
+    right: 0%;
+    top: -6%;
+}
+}
+@media all and (max-width: 991px) {
+  .inner-box-design {
+    padding: 20px 15px;
+}
+
+  .exchange-card {
+    padding: 30px 15px;
+    border-radius: 10px;
+  }
+  .exchange-card-body {
+    margin-top: 20px;
+  }
+  .compare-box button {
+    height: 35px;
+    width: 35px;
+  }
+  .user-input input {
+    font-size: 26px;
+  }
+  .coin-box {
+    gap: 5px;
+
+    font-size: 14px;
+  }
+  .coin-box img {
+    max-width: 20px;
+    max-height: 20px;
+  }
+  .circle-effect {
+    height: 200px;
+    width: 150px;
+  }
+  .primary-btn {
+    padding: 6px 14px;
+    gap: 5px;
+    font-size: 15px;
+  }
+  .circle-effect-2 {
+    right: 0%;
+  }
+  .common-heading h2 {
+    font-size: 24px;
+  }
+  .bank-setup {
+    width: 96%;
+    padding: 40px 15px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .custom-modal{
+    padding: 30px 15px;
+  }
+  .outline-btn {
+    padding: 2px 5px;
+    gap: 4px;
+    font-size: 15px;
+  }
+  .compare-box button{
+    display: none;
+  }
+  .exchange-info-list li{
+    font-size: 14px;
+  }
+  .timer span {
+    font-size: 17px;
+}
+}
+
+@media all and (max-width: 576px) {
+}
+
+@media all and (max-width: 450px) {
+}
