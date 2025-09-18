@@ -429,7 +429,7 @@ th {
   padding: 5px 10px;
   border: 1px solid gray;
   white-space: nowrap;
-}
+} 
 .pending-status {
   border-color: #fab8111a;
   background: #fab8111a;
@@ -482,9 +482,7 @@ select {
   z-index: 10;
   right: 0;
 }
-.logo img {
-  max-width: 40px;
-}
+
 .dropdown-list li {
   display: flex;
   align-items: center;

@@ -35,17 +35,18 @@
               <div class="logo d-flex align-items-center gap-1">
                 <a href="#"
                   ><img
-                    src="assets/images/andromarkets.png"
+                    src="assets/images/mycoinpoll.png"
                     alt="logo"
                     class="w-100"
                 /></a>
                 <a href="#"
                   ><img
-                    src="assets/images/mycoinpoll.png"
+                    src="assets/images/andromarkets.png"
                     alt="logo"
                     class="w-100"
                 /></a>
-                <h4 class="m-0 ms-2">Vesting</h4>
+
+                <h4 class="m-0 ms-2"><b>Vesting</b></h4>
               </div>
               <div class="header-right-side">
                 <!-- <ul>
@@ -128,10 +129,10 @@
 
               <div class="w-50 mt-4">
                 <button
+                  id="start-vesting-btn"
+                  disabled
                   type="submit"
                   class="primary-btn w-100 justify-content-center pointer"
-                  data-bs-toggle="modal"
-                  data-bs-target="#confirm-modal"
                 >
                   Start Vesting
                   <img src="assets/images/icon/arrow-up-right.svg" alt="icon" />
@@ -426,9 +427,9 @@
 
     <!-- start footer area  -->
     <footer class="footer-area text-center p-3 mt-3">
-      <p class="m-0 p-0 gradient-color d-inline-block">
+      <p class="m-0 p-0 d-inline-block">
         &copy; 2025
-        <a href="https://metafusionlabs.com/"> MetaFusion Labs</a> LLC SRL All
+        <a href="https://metafusionlabs.com/" class="gradient-color"> MetaFusion Labs  LLC SRL</a> All
         Rights Reserved.
       </p>
     </footer>
@@ -493,6 +494,48 @@
       }
       setInterval(updateCountdown, 1000);
       updateCountdown();
+    </script>
+    <script>
+      const emailInput = document.getElementById("email");
+      const clientIdInput = document.getElementById("client-id");
+      const vestingBtn = document.getElementById("start-vesting-btn");
+     function validateEmail() {
+  const email = emailInput.value.trim();
+
+  // More robust regex: allows subdomains, prevents trailing dots, etc.
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  const isValid = emailRegex.test(email) && !email.endsWith(".");
+  emailInput.classList.toggle("is-invalid", !isValid);
+
+  if (!isValid) {
+    emailInput.setCustomValidity("Invalid email format. Example: user@example.com");
+    emailInput.reportValidity();
+  } else {
+    emailInput.setCustomValidity("");
+  }
+
+  return isValid;
+}
+
+      function validateClientId() {
+        const id = clientIdInput.value.trim();
+        const idRegex = /^\d{4}$/;
+        const isValid = idRegex.test(id);
+        clientIdInput.classList.toggle("is-invalid", !isValid);
+        clientIdInput.setCustomValidity(
+          isValid ? "" : "Client ID must be exactly 4 digits."
+        );
+        if (!isValid) clientIdInput.reportValidity();
+        return isValid;
+      }
+      function checkFormValidity() {
+        const emailValid = validateEmail();
+        const idValid = validateClientId();
+        vestingBtn.disabled = !(emailValid && idValid);
+      }
+      emailInput.addEventListener("blur", checkFormValidity);
+      clientIdInput.addEventListener("blur", checkFormValidity);
     </script>
   </body>
 </html>
