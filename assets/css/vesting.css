@@ -242,11 +242,11 @@
   color: #fff;
 }
 .accordion-button {
-  color: #1cd691 !important;
+  color: #F5C448 !important;
 }
 .accordion-button.collapsed {
   color: #fff !important;
 }
 .accordion-button.collapsed:hover {
-  color: #1cd691 !important;
+  color: #F5C448 !important;
 }
